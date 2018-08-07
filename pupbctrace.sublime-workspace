@@ -1,0 +1,303 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"in",
+				"input"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"na",
+				"nav-item"
+			],
+			[
+				"user_",
+				"User_model"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"form",
+				"form-row"
+			],
+			[
+				"sign",
+				"signup"
+			],
+			[
+				"fun",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/xampp/htdocs/www/pupbctrace"
+	],
+	"file_history":
+	[
+		"/C/xampp/htdocs/www/pupbctrace/application/controllers/Dashboard.php",
+		"/C/xampp/htdocs/www/sub.sublime-project",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/templates_1/header.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/templates_1/sub_footer.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/templates_1/sub_header.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/controllers/Dashboard_1.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/templates_1/footer.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/templates_1/blank.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/config/routes.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/config/autoload.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/templates_1/heading.php",
+		"/C/xampp/htdocs/www/templates/AdminLTE-2.4.5/index.html",
+		"/C/xampp/htdocs/www/templates/AdminLTE-2.4.5/pages/examples/blank.html",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/templates/header.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/templates/heading.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/templates/heading_1.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/templates/footing_1.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/templates/footer_1.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/controllers/User.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/models/User_model.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/templates/header_1.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/templates/header1.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/signup.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/views/login.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/config/config.php",
+		"/C/xampp/htdocs/www/pupbctrace/application/controllers/index.html",
+		"/C/xampp/htdocs/www/pupbctrace/application/models/General_Model.php",
+		"/C/xampp/htdocs/www/workbyte/application/views/templates/heading.php",
+		"/C/xampp/htdocs/www/workbyte/assets/fontawesome/css/all.css",
+		"/C/xampp/htdocs/www/workbyte/assets/fontawesome/css/all.min.css",
+		"/C/xampp/htdocs/www/workbyte/application/views/academic_degree.php",
+		"/C/xampp/htdocs/www/workbyte/application/views/dashboard_overview.php",
+		"/C/xampp/htdocs/www/workbyte/application/views/templates/header.php",
+		"/C/xampp/htdocs/www/workbyte/assets/fontawesome/css/v4-shims.css",
+		"/C/xampp/htdocs/www/workbyte/assets/fontawesome/css/fontawesome.css",
+		"/C/xampp/htdocs/www/workbyte/application/config/routes.php",
+		"/C/xampp/htdocs/www/workbyte/application/controllers/User.php",
+		"/C/xampp/htdocs/www/workbyte/.htaccess",
+		"/C/xampp/htdocs/www/workbyte/application/config/config.php",
+		"/C/xampp/htdocs/www/workbyte/system/core/Config.php",
+		"/C/xampp/htdocs/www/workbyte/application/views/signup.php",
+		"/C/xampp/htdocs/www/workbyte/application/controllers/Dashboard.php",
+		"/C/xampp/htdocs/www/workbyte/application/models/User_model.php",
+		"/C/xampp/htdocs/www/workbyte/application/views/templates/footing.php",
+		"/C/xampp/htdocs/www/workbyte/application/views/login.php",
+		"/C/xampp/htdocs/www/workbyte/assets/bootstrap/css/bootstrap.css",
+		"/C/xampp/htdocs/www/workbyte/assets/jquery/jquery.js",
+		"/C/xampp/htdocs/www/workbyte/test.css",
+		"/C/xampp/htdocs/www/sb-admin/vendor/fontawesome-free/css/all.css",
+		"/C/xampp/htdocs/www/sb-admin/index.html",
+		"/C/xampp/htdocs/www/templates/startbootstrap-sb-admin-gh-pages/index.html",
+		"/C/xampp/htdocs/www/workbyte/application/views/templates/nav.php",
+		"/C/xampp/htdocs/www/workbyte/application/views/dashboard",
+		"/C/xampp/htdocs/www/workbyte/assets/css/sb-admin.css",
+		"/C/xampp/htdocs/www/WorkByte/application/views/templates/footer.php",
+		"/C/xampp/htdocs/www/templates/startbootstrap-sb-admin-gh-pages/css/sb-admin.css",
+		"/C/xampp/htdocs/www/WorkByte/application/controllers/User.php",
+		"/C/xampp/htdocs/www/WorkByte/application/views/signup.php",
+		"/C/xampp/htdocs/www/WorkByte/application/views/login.php",
+		"/C/xampp/htdocs/www/WorkByte/application/views/templates/header.php",
+		"/C/xampp/htdocs/www/WorkByte/application/controllers/Dashboard.php",
+		"/C/xampp/htdocs/www/WorkByte/application/models/General_Model.php",
+		"/C/xampp/htdocs/www/WorkByte/application/models/user_model.php",
+		"/C/xampp/htdocs/www/WorkByte/application/config/routes.php",
+		"/C/xampp/htdocs/www/WorkByte/application/controllers/Login.php",
+		"/C/xampp/htdocs/www/WorkByte/application/config/database.php",
+		"/C/xampp/htdocs/www/WorkByte/application/config/config.php",
+		"/C/xampp/htdocs/paylink/application/config/routes.php",
+		"/C/xampp/htdocs/index.php",
+		"/C/xampp/htdocs/paylink/application/config/database.php",
+		"/C/xampp/htdocs/paylink/application/config/config.php",
+		"/C/xampp/htdocs/paylink/application/controllers/login.php",
+		"/C/xampp/htdocs/www/WorkByte/license.txt",
+		"/C/xampp/htdocs/www/WorkByte/composer.json",
+		"/C/xampp/htdocs/paylink/application/controllers/Pages.php"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"class"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.0423728813559,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "pupbctrace.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+		"last_automatic_layout":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		]
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 186.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
