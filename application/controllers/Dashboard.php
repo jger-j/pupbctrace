@@ -19,7 +19,7 @@ class Dashboard extends CI_Controller {
             'bread' => 'Overview');
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sub_header');
-        $this->load->view('templates/blank');
+        $this->load->view('admin/alumni/index');
         $this->load->view('templates/sub_footer');
         $this->load->view('templates/footer');
     }
