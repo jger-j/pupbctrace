@@ -41,4 +41,5 @@ public function __construct() {
         $this->degreemodel->insert_degree();
         redirect('../degree/views');
     }
+    
 }

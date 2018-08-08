@@ -26,12 +26,7 @@ class User_model extends CI_Model{
         $email = $this->input->post('email');
         $password = $this->input->post('password');
 
-        // if(($email=='sample@end.com')&&($password=="end")){
-        // 	$this->session->set_userdata('user', $this->input->post('email'));
-        //      return true;
-        // } else {
-        // 	return false;
-        // }
+       
         $query = $this->db->get_where('wb_user', array('email' => $email, 'password' => $password));
         if ($query->row_array() > 0) {
             $this->session->set_userdata('user', $this->input->post('email'));

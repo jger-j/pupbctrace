@@ -1,9 +1,13 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?php $sublnk = base_url() . "assets/sb_admin/"; ?>
 
-    </body>
+<!-- Bootstrap core JavaScript-->
+
+
+<script src="<?php echo $sublnk; ?>vendor/jquery/jquery.min.js"></script>
+<script src="<?php echo $sublnk; ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="<?php echo $sublnk; ?>vendor/jquery-easing/jquery.easing.min.js"></script>
+
+</body>
 </html>

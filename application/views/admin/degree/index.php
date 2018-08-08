@@ -14,7 +14,8 @@
                     <th>Description</th>
                     <th style="width: 30px">Action</th>
                 </tr>
-                <?php  $number=0;  foreach ($tblcontent as $data) {
+                <?php $number = 0;
+                foreach ($tblcontent as $data) {
                     ?>
                     <tr>
                         <td> <?= ++$number ?> </td>
@@ -22,7 +23,7 @@
                         <td>  <?= $data->description ?>   </td>
                         <td> <a class="btn btn-primary" href="edit/<?= $data->degree_No ?> " >Edit</a> </td>
                     </tr>
-                <?php } ?>
+<?php } ?>
 
 
             </table>
@@ -37,7 +38,7 @@
 
                     <form action="insert_degree" method="POST">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">New Batch</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">New Academic Degree</h5>
                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
