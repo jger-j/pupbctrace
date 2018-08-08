@@ -109,9 +109,9 @@
               </span>
           </a>
           <ul class="treeview-menu">
-              <li><a href="<?php echo site_url('manage/academicyear/create') ?>">Academic Year</a></li>
-            <li><a href="#">Academic Degree</a></li>
-            <li><a href="#">Alumni</a></li>
+              <li><a href="<?php echo site_url('manage/academicyear/create') ?>"><i class="fa fa-circle-o text-blue"></i>Academic Year</a></li>
+            <li><a href="#"><i class="fa fa-circle-o text-orange"></i>Academic Degree</a></li>
+            <li><a href="#"><i class="fa fa-circle-o text-green"></i>Alumni</a></li>
           </ul>
         </li>
       </ul>

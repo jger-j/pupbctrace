@@ -46,12 +46,12 @@
               <h4 class="control-sidebar-subheading">
                 Code Igniter Php Framework
                 <span class="pull-right-container">
-                    <span class="label label-danger pull-right">3%</span>
+                    <span class="label label-danger pull-right">4%</span>
                   </span>
               </h4>
 
               <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 3%"></div>
+                <div class="progress-bar progress-bar-danger" style="width: 4%"></div>
               </div>
             </a>
           </li>
