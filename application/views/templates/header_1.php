@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -30,3 +32,11 @@ and open the template in the editor.
 
     </head>
     <body class="bg-dark">
+
+        <header class="header">
+            <div class="col-12 badge-info">
+                <div class="h3">
+                    PUPBC - TRACE
+                </div></div>
+        </header>
+

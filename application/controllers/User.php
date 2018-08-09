@@ -21,20 +21,20 @@ class User extends CI_Controller {
 
     public function logout() {
         $this->session->unset_userdata('user');
-        redirect('../login');
+
+        redirect(base_url('login'));
     }
 
     public function auth() {
         if ($this->User_model->signin()) {
-            redirect('../dashboard');
+            redirect(base_url('dashboard'));
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger"><strong>Login Error:</strong> Username or Password is invalid!</div>');
-            redirect('../login');
+            redirect(base_url('login'));
         }
     }
 
     public function signup() {
-
         $this->form_validation->set_rules('firstname', 'First Name', 'required|alpha');
         $this->form_validation->set_rules('middlename', 'Middle Name', 'required');
         $this->form_validation->set_rules('lastname', 'Last Name', 'required');
@@ -50,11 +50,22 @@ class User extends CI_Controller {
             $this->load->view('signup');
             $this->load->view('templates/footer_1');
         } else {
-            $this->User_model->register();
-            $this->session->set_flashdata('message', '<div class="alert alert-success"><strong>Successfully Register:</strong> You may now login!</div>');
-            
-            redirect('../login');
+            $this->register();
         }
+    }
+    public function register(){
+        $data = array(
+                'alumni_number' => $this->input->post('alumni_number'),
+                'email' => $this->input->post('email'),
+                'password' => $this->input->post('password'),
+                'firstname' => $this->input->post('firstname'),
+                'middlename' => $this->input->post('middlename'),
+                'lastname' => $this->input->post('lastname')
+            );
+            $this->User_model->register($data);
+            $this->session->set_flashdata('message', '<div class="alert alert-success"><strong>Successfully Register:</strong> You may now login!</div>');
+
+            redirect(base_url('login'));
     }
 
 }

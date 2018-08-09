@@ -7,11 +7,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 /**
- * Description of Degree
+ * Description of Alumni
  *
  * @author End 
  */
-class Degree extends CI_Controller {
+class Alumni extends CI_Controller {
 
     //put your code here
     public $folder;
@@ -20,7 +20,7 @@ class Degree extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('degree_model');
-        $this->folder = "admin/degree/";
+        $this->folder = "admin/alumni/";
         $this->folder1 = "views/" . $this->folder;
     }
 
@@ -34,7 +34,11 @@ class Degree extends CI_Controller {
 
     public function views($page = 'index') {
 
-        $data = array('title' => 'Degree', 'page' => 'Manage Acdemic Degree', 'page1' => 'List', 'tblcontent' => $this->degree_model->get_degree());
+        $data = array('title' => 'Alumni',
+            'page' => 'Manage Alumni',
+            'page1' => 'List',
+            'tblcontent' => $this->degree_model->get_degree()
+        );
         if (!file_exists(APPPATH . $this->folder1 . $page)) {
             $this->load_views($page, $data);
         } else {
@@ -45,18 +49,12 @@ class Degree extends CI_Controller {
     public function index() {
         $this->views('index');
     }
+    
 
-    public function add() {
-        $code = $this->input->post('code');
-        $description = $this->input->post('description');
-        $this->degree_model->insert_degree($code, $description);
-        redirect(base_url('admin/degree'));
-    }
-
-    public function delete($id) {
-        $this->degree_model->delete_degree($id);
-        $this->session->set_flashdata('message', '<div class="alert alert-success"><strong>Successfully Deleted:</strong></div>');
-        redirect(base_url('admin/degree'));
-    }
-
+//    public function add() {
+//
+//        $data = array(
+//        );
+//        $this->alumni_model->insert_alumni($data);
+//    }
 }

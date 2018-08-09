@@ -9,17 +9,8 @@ class User_model extends CI_Model{
 
     
 	}
-	public function register(){
-		$data = array(
-			'alumni_number'=> $this->input->post('alumni_number'),
-			'email'=> $this->input->post('email'),
-			'password' => $this->input->post('password'),
-			'firstname'=>$this->input->post('firstname'),
-			'middlename' =>$this->input->post('middlename'),
-			'lastname' => $this->input->post('lastname')
-
-		);
-		$this->db->insert('wb_user',$data);
+	public function register($data){
+            $this->db->insert('wb_user',$data);
 	}
 	public function signin() {
 		 
