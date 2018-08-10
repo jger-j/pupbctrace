@@ -8,6 +8,7 @@
 
 <!-- Core plugin JavaScript-->
 <script src="<?php echo $sublnk; ?>vendor/jquery-easing/jquery.easing.min.js"></script>
-
+<!-- PACE -->
+<script src="<?php echo $sublnk; ?>../bower_components/PACE/pace.min.js"></script>
 </body>
 </html>

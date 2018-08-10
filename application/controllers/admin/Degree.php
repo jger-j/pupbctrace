@@ -29,12 +29,11 @@ class Degree extends CI_Controller {
         $this->load->view('templates/sub_header');
         $this->load->view($this->folder . $url);
         $this->load->view('templates/sub_footer');
+        //$this->load->view($this->folder.'ajax',$data);
         $this->load->view('templates/footer');
     }
 
-    public function views($page = 'index') {
-
-        $data = array('title' => 'Degree', 'page' => 'Manage Acdemic Degree', 'page1' => 'List', 'tblcontent' => $this->degree_model->get_degree());
+    public function views($page, $data) {
         if (!file_exists(APPPATH . $this->folder1 . $page)) {
             $this->load_views($page, $data);
         } else {
@@ -43,7 +42,16 @@ class Degree extends CI_Controller {
     }
 
     public function index() {
-        $this->views('index');
+        
+        $data = array('title' => 'Degree',
+            'page' => 'Acdemic Degrees List',
+            'description' => 'The list of Academic degree accomplised in PUP Bansud Campus',
+            'tblcontent' => $this->degree_model->get_degree(),
+            'degree' => 'active',
+            'dashboard'=>'',
+            'alumni'=>''
+                );
+        $this->views('index', $data);
     }
 
     public function add() {
@@ -55,7 +63,7 @@ class Degree extends CI_Controller {
 
     public function delete($id) {
         $this->degree_model->delete_degree($id);
-        $this->session->set_flashdata('message', '<div class="alert alert-success"><strong>Successfully Deleted:</strong></div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-warning"><strong>Successfully Deleted:</strong></div>');
         redirect(base_url('admin/degree'));
     }
 

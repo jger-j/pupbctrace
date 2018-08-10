@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$sublnk= base_url()."assets/";
+$sublnk = base_url() . "assets/";
 ?><!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,6 +17,9 @@ $sublnk= base_url()."assets/";
         <link rel="stylesheet" href="<?php echo $sublnk; ?>bower_components/bootstrap/dist/css/bootstrap.min.css">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="<?php echo $sublnk; ?>bower_components/font-awesome/css/font-awesome.min.css">
+        <!-- Select2 -->
+        <link rel="stylesheet" href="<?php echo $sublnk; ?>bower_components/select2/dist/css/select2.min.css">
+
         <!-- Ionicons -->
         <link rel="stylesheet" href="<?php echo $sublnk; ?>bower_components/Ionicons/css/ionicons.min.css">
         <!-- DataTables -->
@@ -26,6 +29,9 @@ $sublnk= base_url()."assets/";
         <!-- AdminLTE Skins. Choose a skin from the css/skins
              folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="<?php echo $sublnk; ?>dist/css/skins/_all-skins.min.css">
+        <!-- Pace style -->
+        <link rel="stylesheet" href="<?php echo $sublnk; ?>plugins/pace/pace.min.css">
+
 
     </head>
     <body class="hold-transition skin-blue sidebar-mini">

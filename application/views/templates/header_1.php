@@ -29,6 +29,10 @@ and open the template in the editor.
 
         <!-- Custom styles for this template-->
         <link href="<?php echo $sublnk; ?>css/sb-admin.css" rel="stylesheet">
+        <!-- Pace style -->
+        <link rel="stylesheet" href="<?php echo $sublnk; ?>../plugins/pace/pace.min.css">
+
+
 
     </head>
     <body class="bg-dark">

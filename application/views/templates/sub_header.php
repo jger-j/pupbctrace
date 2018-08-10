@@ -5,7 +5,7 @@
         <!-- Logo -->
         <a href="<?= base_url() ?>" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>AIP</b></span>
+            <span class="logo-mini"><b>P</b>TE</span>
             <!-- logo for regular state and mobile devices -->
             <span class="logo-lg"><b>Alumni </b>Portal</span>
         </a>
@@ -34,7 +34,7 @@
                                 <img src="<?php echo base_url('assets/dist/img/avatar04.png'); ?>" class="img-circle" alt="User Image">
 
                                 <p>
-                                    END - Admin
+                                    <?php echo $this->session->userdata('user'); ?>
                                     <small>Member since 2018</small>
                                 </p>
                             </li>
@@ -101,67 +101,59 @@
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">HEADER</li>
                 <!-- Option"ally, you can add icons to the links -->
-                <?php
-                $active=array('','','','','');
-                
-                
-                if ($title == 'Dashboard') {
-                    $active[0] = 'active';
-                }
-                if ($title == 'Degree') {
-                    $active[1] = 'active';
-                }
-                if ($title == 'Alumni') {
-                    $active[2]= 'active';
-                }
-                ?>
+
+                <li class="<?= $dashboard ?>"><a href="<?= base_url('admin/dashboard') ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
 
 
-                <li class="<?= $active[0]; ?>"><a href="<?= base_url() ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-
-
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-archive"></i> <span>Manage Alumni</span>
+                <li class="treeview <?= $alumni; ?>">
+                    <a href="#"><i class="fa fa-archive"></i> <span>Alumni</span>
                         <span class="pull-right-container">
                             <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                         <li class="<?= $active[2]; ?>"><a href="<?= base_url('admin/alumni') ?>"><i class="fa fa-circle-o text-green"></i>Alumni</a></li>
+                        <li class=""><a href="<?= base_url('admin/alumni') ?>"><i class="fa fa-list"></i><span>VIew Alumni List</span></a></li>
+                        <li class=""><a href="<?= base_url('admin/alumni/add') ?>"><i class="fa fa-plus"></i>Add Alumni</a></li>
                     </ul>
                 </li>
-                <li class="<?= $active[1]; ?>"><a href="<?= base_url('admin/degree') ?>"><i class="fa fa-graduation-cap"></i><span>Academic Degrees</span></a></li>
-                <li class="<?= $active[2]; ?>"><a href="<?= base_url('admin/alumni') ?>"><i class="fa fa-group "></i><span>Alumni</span></a></li>
+                 <li class="treeview <?= $degree; ?>">
+                    <a href="#"><i class="fa fa-graduation-cap"></i> <span>Academic Degree</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="<?= $degree; ?>"><a href="<?= base_url('admin/degree') ?>"><i class="fa fa-graduation-cap"></i><span>List</span></a></li>
+                    </ul>
+                </li>
+                    <!-- /.sidebar-menu -->
 
-            </ul>
-            <!-- /.sidebar-menu -->
-
-        </section>
+                    </section>
 
 
-    </aside>
-    <div class="content-wrapper">
+                    </aside>
+                    <div class="content-wrapper">
 
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>
-                    <?php
-                    if (!empty($page)) {
-                        echo $page;
-                    }
-                    ?>
-                <small><?php
-                    if (!empty($page1)) {
-                        echo $page1;
-                    }
-                    ?></small>
-            </h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-                <li class="active">Here</li>
-            </ol>
-        </section>
+                        <!-- Content Header (Page header) -->
+                        <section class="content-header">
+                            <h1>
+                                <?php
+                                if (!empty($page)) {
+                                    echo $page;
+                                }
+                                ?>
+                                <small><?php
+                                    if (!empty($description)) {
+                                        echo $description;
+                                    }
+                                    ?></small>
+                            </h1>
+                            <ol class="breadcrumb">
+                                <li><a href="<?= base_url('admin/dashboard') ?>"><i class="fa fa-dashboard "></i>Dashboard</a></li>
+                                <li class="active"><?= $title ?></li>
+                            </ol>
+                        </section>
 
-        <!-- Main content -->
-        <section class="content container-fluid">
+                        <!-- Main content -->
+                        <section class="content container-fluid">
 

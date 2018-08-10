@@ -6,13 +6,20 @@ class User extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
+
         $this->load->model('User_model');
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
     }
 
     public function login() {
-
+        if (!empty($this->session->userdata('user'))) {
+            if (!($this->session->userdata('role') === 'admin')) {
+                redirect(base_url('admin/dashboard'));
+            } else {
+                redirect(base_url('admin/dashboard'));
+            }
+        }
         $data['title'] = 'Login';
         $this->load->view('templates/header_1', $data);
         $this->load->view('login');
@@ -21,13 +28,16 @@ class User extends CI_Controller {
 
     public function logout() {
         $this->session->unset_userdata('user');
-
+        //$this->session->unset_userdata('role');
         redirect(base_url('login'));
     }
 
     public function auth() {
         if ($this->User_model->signin()) {
-            redirect(base_url('dashboard'));
+            //if($this->session->userdata('role')=='admin'){
+            //   redirect(base_url('admin/dashboard'));
+            // }else{}
+            redirect(base_url('admin/dashboard'));
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger"><strong>Login Error:</strong> Username or Password is invalid!</div>');
             redirect(base_url('login'));
@@ -53,19 +63,20 @@ class User extends CI_Controller {
             $this->register();
         }
     }
-    public function register(){
-        $data = array(
-                'alumni_number' => $this->input->post('alumni_number'),
-                'email' => $this->input->post('email'),
-                'password' => $this->input->post('password'),
-                'firstname' => $this->input->post('firstname'),
-                'middlename' => $this->input->post('middlename'),
-                'lastname' => $this->input->post('lastname')
-            );
-            $this->User_model->register($data);
-            $this->session->set_flashdata('message', '<div class="alert alert-success"><strong>Successfully Register:</strong> You may now login!</div>');
 
-            redirect(base_url('login'));
+    public function register() {
+        $data = array(
+            'alumni_number' => $this->input->post('alumni_number'),
+            'email' => $this->input->post('email'),
+            'password' => $this->input->post('password'),
+            'firstname' => $this->input->post('firstname'),
+            'middlename' => $this->input->post('middlename'),
+            'lastname' => $this->input->post('lastname')
+        );
+        $this->User_model->register($data);
+        $this->session->set_flashdata('message', '<div class="alert alert-success"><strong>Successfully Register:</strong> You may now login!</div>');
+
+        redirect(base_url('login'));
     }
 
 }

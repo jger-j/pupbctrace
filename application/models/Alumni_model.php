@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  * @author End 
  */
-class Alumni_model extends CI_Controller {
+class Alumni_model extends CI_model {
 
     //put your code here
     public function __construct() {
@@ -19,19 +19,38 @@ class Alumni_model extends CI_Controller {
     }
 
     public function get_alumni() {
-        return $this->db->get('wb_alumni');
-    }
 
-    public function insert_alumnni($data) {
-        $this->db->insert('wb_user', $data);
+        return $this->db->query('SELECT `wb_alumni`.*, `wb_degree`.*
+FROM `wb_degree`
+ LEFT JOIN `workbyte_db`.`wb_alumni` ON `wb_degree`.`degree_no` = `wb_alumni`.`degree_no`')->result();
     }
 
     public function get_degree() {
         return $this->db->get('wb_degree');
     }
-    
-    public function update_alumni_info($id,$data){
-        $this->db->update('wb_alumni');
+
+    public function insert_alumnni($data) {
+        $this->db->insert('wb_alumni', $data);
+        $number = $data['alumni_number'];
+        $email = $data['email'];
+        $this->create_alumni_account($number, $email);
+    }
+
+    public function create_alumni_account($number, $email) {
+        $data = array(
+            'password' => "11223344",
+            'alumni_number' => $number,
+            'email' => $email,
+            'role' => 'Alumnus'
+        );
+        $this->db->insert('wb_users', $data);
+    }
+    public function delete_alumni($alumni_number){
+        $data = array(
+            'alumni_number' => $alumni_number
+        );
+        $this->db->delete('wb_alumni', $data);
+        $this->db->delete('wb_users', $data);
     }
 
 }

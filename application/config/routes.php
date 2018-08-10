@@ -51,12 +51,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 
-$route['default_controller'] = 'dashboard';
+$route['default_controller'] = 'user/login';
 $route['login']="user/login";
 $route['signup']="user/signup";
-
-$route['manage/academicyear']='manage_controller/views/index';
-$route['manage/academicyear/(:any)']='manage_controller/views/$1';
-
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
