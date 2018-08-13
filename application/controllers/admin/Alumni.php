@@ -49,10 +49,8 @@ class Alumni extends CI_Controller {
         $data = array('title' => 'Alumni',
             'page' => 'PUP Bansud Campus Alumni',
             'description' => 'List of PUP Alumni',
-            'courselist' => $this->course_model->get_course(),
-            'alumni' => 'active',
-            'course' => '',
-            'dashboard' => ''
+            'courselist' => $this->course_model->get_course()
+            
         );
         $this->views('index', $data);
     }
@@ -62,10 +60,7 @@ class Alumni extends CI_Controller {
         $data = array('title' => 'Alumni - Add',
             'page' => 'PUP Bansud Campus Alumni',
             'description' => 'Add New Alumnus',
-            'courselist' => $this->course_model->get_course(),
-            'alumni' => 'active',
-            'course' => '',
-            'dashboard' => ''
+            'courselist' => $this->course_model->get_course()
         );
         $this->views('add', $data);
     }

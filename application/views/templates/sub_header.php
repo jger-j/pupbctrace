@@ -77,10 +77,10 @@
                     <li class="header">Navigation</li>
                     <!-- Option"ally, you can add icons to the links -->
 
-                    <li class="<?= $dashboard ?>"><a href="<?= base_url('admin/dashboard') ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+                    
+                    <li class="active"><a href="<?= base_url('admin/dashboard') ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
 
-
-                    <li class="treeview <?= $alumni; ?>">
+                    <li class="treeview ">
                         <a href="#"><i class="fa fa-archive"></i> <span>Alumni</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
@@ -91,22 +91,23 @@
                             <li class=""><a href="<?= base_url('admin/alumni/add') ?>"><i class="fa fa-plus"></i>Add Alumni</a></li>
                         </ul>
                     </li>
-                    <li class="treeview <?= $course; ?>">
-                        <a href="#"><i class="fa fa-graduation-cap"></i> <span>Academic Course</span>
+
+                    <li class="treeview ">
+                        <a href="#"><i class="fa fa-graduation-cap"></i> <span>Course</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li class="<?= $course; ?>"><a href="<?= base_url('admin/course') ?>"><i class="fa fa-graduation-cap"></i><span>List</span></a></li>
+                            <li class=""><a href="<?= base_url('admin/course') ?>"><i class="fa fa-graduation-cap"></i><span>List</span></a></li>
                         </ul>
                     </li>
-                    <!-- /.sidebar-menu -->
-<!--                    <li class=""><a href="<?= base_url() ?>"><i class="fa fa-list"></i>Event</a></li>
-                    <li class=""><a href="<?= base_url() ?>"><i class="fa fa-list"></i>Project</a></li>-->
+
+                    <li class=""><a href="<?= base_url('admin/email') ?>"><i class="fa fa-envelope"></i><span>Emails</span></a></li>
+     <!--                   <li class=""><a href="<?= base_url() ?>"><i class="fa fa-list"></i>Project</a></li>-->
 
             </section>
-
+            <!-- /.sidebar-menu -->
 
         </aside>
         <div class="content-wrapper">
@@ -114,16 +115,16 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    <?php
-                    if (!empty($page)) {
-                        echo $page;
-                    }
-                    ?>
+<?php
+if (!empty($page)) {
+    echo $page;
+}
+?>
                     <small><?php
-                        if (!empty($description)) {
-                            echo $description;
-                        }
-                        ?></small>
+                    if (!empty($description)) {
+                        echo $description;
+                    }
+                    ?></small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="<?= base_url('admin/dashboard') ?>"><i class="fa fa-dashboard "></i>Dashboard</a></li>

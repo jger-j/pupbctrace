@@ -12,12 +12,13 @@
  * @author End 
  */
 class Dashboard extends CI_Controller {
+
     public $folder;
     public $folder1;
 
     public function __construct() {
         parent::__construct();
-        if (!($this->session->userdata('role')==="administrator")) {
+        if (!($this->session->userdata('role') === "administrator")) {
             redirect(base_url('user/redirect_page'));
         }
         $this->folder = "admin/dashboard/";
@@ -42,15 +43,15 @@ class Dashboard extends CI_Controller {
     }
 
     public function index() {
-        
-        $data = array('title' => 'TRACE - Dashboard',
+
+        $data = array('title' => 'Trace',
             'page' => 'Dashboard',
-            'description' => 'Some Description',
-            'alumni'=>'',
-            'dashboard'=>'active',
-            'course'=>''
+            'description' => 'Some Description'
+           
+          
         );
         $this->views('index', $data);
     }
+    
 
 }

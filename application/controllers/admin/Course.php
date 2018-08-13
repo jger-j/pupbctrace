@@ -46,10 +46,8 @@ class Course extends CI_Controller {
         $data = array('title' => 'Course',
             'page' => 'Course List',
             'description' => 'The list of Course offered in PUP Bansud Campus',
-            'tblcontent' => $this->course_model->get_course(),
-            'course' => 'active',
-            'dashboard'=>'',
-            'alumni'=>''
+            'tblcontent' => $this->course_model->get_course()
+           
                 );
         $this->views('index', $data);
     }

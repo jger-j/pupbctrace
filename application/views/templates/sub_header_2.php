@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <small><?= $this->session->userdata('role'); ?></small>
                                     </p>
                                 </li>
-                                
+
                                 <li class="user-footer">
                                     <div class="pull-left">
                                         <a href="#" class="btn btn-default btn-flat">Profile</a>
@@ -75,15 +75,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>    
                 </div>
                 <!-- search form (Optional) -->
-                
+
                 <!-- Sidebar Menu -->
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">Navigation</li>
                     <!-- Option"ally, you can add icons to the links -->
 
                     <li class="<?= $dashboard ?>"><a href="<?= base_url('mydashboard/home') ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-
-
 
                     <!-- /.sidebar-menu -->
 
@@ -102,10 +100,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     }
                     ?>
                     <small><?php
-                    if (!empty($description)) {
-                        echo $description;
-                    }
-                    ?></small>
+                        if (!empty($description)) {
+                            echo $description;
+                        }
+                        ?></small>
                 </h1>
                 <ol class="breadcrumb">
 
