@@ -7,36 +7,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="box">
 
         <div class="box-header">
-            <p><b>Enter new Alumni info:</b>Name,Year Graduated,Degree Accomplished,Email,and Alumni Number</p>
+            <p><b>Enter new Alumni info:</b>Name,Year Graduated,Course Accomplished,Email,and Alumni Number</p>
         </div>
         <div class="box-body">
             <div class="form-group">
-                
-            
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="firstname">First name</label>
-                    <input type="text" class="form-control"  id="firstname" name="firstname" placeholder="First name" value="<?= set_value('firstname') ?>">
-                    <?php echo form_error('firstname', "<span class='text-danger'>", '</span>'); ?>
 
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="middlename">Middle name</label>
-                    <input type="text" class="form-control"  id="middlename" name="middlename" placeholder="Middle name" value="<?= set_value('middlename') ?>">
-                    <?php echo form_error('middlename', "<span class='text-danger'>", '</span>'); ?>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="surname">Surname</label>
+                        <input type="text" class="form-control"  id="surname" name="surname" placeholder="Surname" value="<?= set_value('surname') ?>">
+                        <?php echo form_error('surname', "<span class='text-danger'>", '</span>'); ?>
 
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="lastname">Last name</label>
-                    <input type="text" class="form-control"  id="lastname" name="lastname" placeholder="Last name" value="<?= set_value('lastname') ?>">
-                    <?php echo form_error('lastname', "<span class='text-danger'>", '</span>'); ?>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="firstname">First name</label>
+                        <input type="text" class="form-control"  id="firstname" name="firstname" placeholder="First name" value="<?= set_value('firstname') ?>">
+                        <?php echo form_error('firstname', "<span class='text-danger'>", '</span>'); ?>
 
+                    </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="middlename">Middle name</label>
+                        <input type="text" class="form-control"  id="middlename" name="middlename" placeholder="Middle name" value="<?= set_value('middlename') ?>">
+                        <?php echo form_error('middlename', "<span class='text-danger'>", '</span>'); ?>
+
+                    </div>
                 </div>
+
             </div><div class="form-group">
 
 
@@ -66,14 +66,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <div class="col-md-8">
                     <div class="form-group">
-                        <label for="degree"> Academic Degree </label>
+                        <label for="course">Course </label>
 
-                        <select class="form-control select2" style="width: 100%;" data-placeholder="Select academic degree finished in PUPBC" id="degree" name="degree">
+                        <select class="form-control select2" style="width: 100%;" data-placeholder="Select Course" id="course" name="course">
                             <option value="" >---Select---</option>
-                            <?php foreach ($degreelist as $item) {
+                            <?php foreach ($courselist as $item) {
                                 ?>
-                                <option  value="<?= $item->degree_no ?>" <?php
-                                if ($item->degree_no == set_value('degree')) {
+                                <option  value="<?= $item->course_no ?>" <?php
+                                if ($item->course_no == set_value('course')) {
                                     echo $selected;
                                 }
                                 ?>>
@@ -83,7 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             }
                             ?>
                         </select>
-                        <?php echo form_error('degree', "<span class='text-danger'>", '</span>'); ?>
+                        <?php echo form_error('course', "<span class='text-danger'>", '</span>'); ?>
 
                     </div>
                 </div>
@@ -112,9 +112,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="box-footer">
             <div class="pull-left">
-               <?=$this->session->flashdata('message')?> 
+                <?= $this->session->flashdata('message') ?> 
             </div>
-            
+
             <div class="pull-right">
                 <input type="reset" class="btn btn-default " value="Reset">
                 <button type="submit" class="btn btn-primary ">Save</button></div>

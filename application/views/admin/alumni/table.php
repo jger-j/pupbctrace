@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </th>
             <th>Name            </th>
             <th>
-                Degree            </th>
+                Course            </th>
             <th>Batch            </th>
             <th>Alumni Number            </th>
             <th>Action            </th>
@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <tr>
             <td> <?= ++$number ?> </td>
             <td>
-                <?= $item->lastname . "," . $item->firstname . " " . $item->middlename ?>
+                <?= $item->surname . ", " . $item->firstname . " " . $item->middlename ?>
             </td>
             <td>
                 <?= $item->code ?>

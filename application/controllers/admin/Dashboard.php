@@ -17,8 +17,8 @@ class Dashboard extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        if (empty($this->session->userdata('user'))) {
-            redirect(base_url('login'));
+        if (!($this->session->userdata('role')==="administrator")) {
+            redirect(base_url('user/redirect_page'));
         }
         $this->folder = "admin/dashboard/";
         $this->folder1 = "views/" . $this->folder;
@@ -48,7 +48,7 @@ class Dashboard extends CI_Controller {
             'description' => 'Some Description',
             'alumni'=>'',
             'dashboard'=>'active',
-            'degree'=>''
+            'course'=>''
         );
         $this->views('index', $data);
     }

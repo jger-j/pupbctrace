@@ -78,4 +78,5 @@
         </div>
     </div>
 </div>
+echo "<script>alert('Warning: This pasge is not functional')</script>";
 

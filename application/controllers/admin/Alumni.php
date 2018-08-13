@@ -21,8 +21,8 @@ class Alumni extends CI_Controller {
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->library('table');
+        $this->load->model('course_model');
         $this->load->model('alumni_model');
-        $this->load->model('degree_model');
         $this->folder = "admin/alumni/";
         $this->folder1 = "views/" . $this->folder;
     }
@@ -49,9 +49,9 @@ class Alumni extends CI_Controller {
         $data = array('title' => 'Alumni',
             'page' => 'PUP Bansud Campus Alumni',
             'description' => 'List of PUP Alumni',
-            'degreelist' => $this->degree_model->get_degree(),
+            'courselist' => $this->course_model->get_course(),
             'alumni' => 'active',
-            'degree' => '',
+            'course' => '',
             'dashboard' => ''
         );
         $this->views('index', $data);
@@ -62,21 +62,21 @@ class Alumni extends CI_Controller {
         $data = array('title' => 'Alumni - Add',
             'page' => 'PUP Bansud Campus Alumni',
             'description' => 'Add New Alumnus',
-            'degreelist' => $this->degree_model->get_degree(),
+            'courselist' => $this->course_model->get_course(),
             'alumni' => 'active',
-            'degree' => '',
+            'course' => '',
             'dashboard' => ''
         );
         $this->views('add', $data);
     }
 
     public function validate_rules() {
-        $this->form_validation->set_rules('firstname', 'First name', 'required|alpha');
-        $this->form_validation->set_rules('middlename', 'Middle name', 'required|alpha');
-        $this->form_validation->set_rules('lastname', 'Last name', 'required|alpha');
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[wb_alumni.email]');
-        $this->form_validation->set_rules('alumni_number', 'Alumni number', 'required|is_unique[wb_alumni.alumni_number]');
-        $this->form_validation->set_rules('degree', 'Academic degree', 'required');
+        $this->form_validation->set_rules('firstname', 'First name', 'required');
+        $this->form_validation->set_rules('middlename', 'Middle name', 'required');
+        $this->form_validation->set_rules('surname', 'Surname', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[wb_user.email]');
+        $this->form_validation->set_rules('alumni_number', 'Alumni number', 'required|is_unique[wb_user.alumni_number]');
+        $this->form_validation->set_rules('course', 'Academic course', 'required');
         $this->form_validation->set_rules('yeargraduated', 'Year graduated', 'required');
     }
 
@@ -86,23 +86,22 @@ class Alumni extends CI_Controller {
             $this->load_add();
         } else {
             $this->insert();
-                 
+
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissal"><strong>Successfully Saved:</strong> New Almnus Account is Created!</div>');
-            
+
             $this->index();
-            
         }
     }
 
     public function insert() {
         $data = array(
+            'surname' => $this->input->post('surname'),
             'firstname' => $this->input->post('firstname'),
             'middlename' => $this->input->post('middlename'),
-            'lastname' => $this->input->post('lastname'),
             'email' => $this->input->post('email'),
+            'alumni_number' => $this->input->post('alumni_number'),
             'yeargraduated' => $this->input->post('yeargraduated'),
-            'degree_no'=> $this->input->post('degree'),
-            'alumni_number' => $this->input->post('alumni_number')
+            'course_no' => $this->input->post('course'),
         );
         $this->alumni_model->insert_alumnni($data);
     }
@@ -113,7 +112,8 @@ class Alumni extends CI_Controller {
         );
         $this->load->view('admin/alumni/table', $data);
     }
-    public function delete($id){
+
+    public function delete($id) {
         $this->alumni_model->delete_alumni($id);
         $this->session->set_flashdata('message', '<div class="alert alert-warning"><strong>Successfully Deleted:</strong></div>');
         redirect(base_url('admin/alumni'));

@@ -6,7 +6,7 @@
     <div class="box">
 
         <div class="box-header">
-            <p><b>Enter new Alumni info:</b>Name,Year Graduated,Degree Accomplished,Email,and Alumni Number</p>
+            <p><b>Enter new Alumni info:</b>Name,Year Graduated,Course Accomplished,Email,and Alumni Number</p>
             </div>
             <div class="box-body">
                 <div class="col-md-4">
@@ -54,19 +54,19 @@
 
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="degree"> Academic Degree </label>
-                        <select class="form-control chosen span2"  id="degree" name="degree" value="<?=set_value('degree')?>">
-                            <option value="">Select degree</option>
-                            <?php foreach ($degreelist as $item) {
+                        <label for="course"> Academic Course </label>
+                        <select class="form-control chosen span2"  id="course" name="course" value="<?=set_value('course')?>">
+                            <option value="">Select course</option>
+                            <?php foreach ($courselist as $item) {
                                 ?>
-                                <option value="<?= $item->degree_No ?>">
+                                <option value="<?= $item->course_No ?>">
                                     <?= $item->code . " / " . $item->description ?> 
                                 </option>
                                 <?php
                             }
                             ?>
                         </select>
-                        <?php echo form_error('degree', "<span class='bg-warning '>", '</span>'); ?>
+                        <?php echo form_error('course', "<span class='bg-warning '>", '</span>'); ?>
 
                     </div>
                 </div>

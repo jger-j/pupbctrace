@@ -47,12 +47,12 @@
                         <h4 class="control-sidebar-subheading">
                             PUPBC TRACE
                             <span class="pull-right-container">
-                                <span class="label label-danger pull-right">5%</span>
+                                <span class="label label-danger pull-right">8%</span>
                             </span>
                         </h4>
 
                         <div class="progress progress-xxs">
-                            <div class="progress-bar progress-bar-danger" style="width: 5%"></div>
+                            <div class="progress-bar progress-bar-danger" style="width: 8%"></div>
                         </div>
                     </a>
                 </li>

@@ -1,5 +1,8 @@
-<body class="hold-transition skin-blue sidebar-mini">
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 
+<body class="hold-transition skin-blue-light sidebar-mini">
     <div class="wrapper">
         <header class="main-header">
             <!-- Logo -->
@@ -24,21 +27,21 @@
                             <!-- Menu Toggle Button -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <!-- The user image in the navbar-->
-                                <img src="<?php echo base_url('assets/dist/img/user3-128x128.jpg'); ?>" class="user-image" alt="User Image">
+                                <img src="<?php echo base_url('assets/dist/img/avatar04.png'); ?>" class="user-image" alt="User Image">
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
                                 <span class="hidden-xs"><?= $this->session->userdata('user') ?></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- The user image in the menu -->
                                 <li class="user-header">
-                                    <img src="<?php echo base_url('assets/dist/img/user3-128x128.jpg'); ?>" class="img-circle" alt="User Image">
+                                    <img src="<?php echo base_url('assets/dist/img/avatar04.png'); ?>" class="img-circle" alt="User Image">
 
                                     <p>
                                         <?= $this->session->userdata('user') ?>
                                         <small><?= $this->session->userdata('role'); ?></small>
                                     </p>
                                 </li>
-
+                                
                                 <li class="user-footer">
                                     <div class="pull-left">
                                         <a href="#" class="btn btn-default btn-flat">Profile</a>
@@ -63,7 +66,7 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="<?php echo base_url('assets/dist/img/user3-128x128.jpg'); ?>"" class="img-circle" alt="User Image">
+                        <img src="<?php echo base_url('assets/dist/img/avatar04.png'); ?>" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
                         <p><?= $this->session->userdata('user') ?></p>
@@ -71,39 +74,18 @@
                         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>    
                 </div>
-
+                <!-- search form (Optional) -->
+                
                 <!-- Sidebar Menu -->
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">Navigation</li>
                     <!-- Option"ally, you can add icons to the links -->
 
-                    <li class="<?= $dashboard ?>"><a href="<?= base_url('admin/dashboard') ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+                    <li class="<?= $dashboard ?>"><a href="<?= base_url('mydashboard/home') ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
 
 
-                    <li class="treeview <?= $alumni; ?>">
-                        <a href="#"><i class="fa fa-archive"></i> <span>Alumni</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li class=""><a href="<?= base_url('admin/alumni') ?>"><i class="fa fa-list"></i><span>VIew Alumni List</span></a></li>
-                            <li class=""><a href="<?= base_url('admin/alumni/add') ?>"><i class="fa fa-plus"></i>Add Alumni</a></li>
-                        </ul>
-                    </li>
-                    <li class="treeview <?= $course; ?>">
-                        <a href="#"><i class="fa fa-graduation-cap"></i> <span>Academic Course</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li class="<?= $course; ?>"><a href="<?= base_url('admin/course') ?>"><i class="fa fa-graduation-cap"></i><span>List</span></a></li>
-                        </ul>
-                    </li>
+
                     <!-- /.sidebar-menu -->
-<!--                    <li class=""><a href="<?= base_url() ?>"><i class="fa fa-list"></i>Event</a></li>
-                    <li class=""><a href="<?= base_url() ?>"><i class="fa fa-list"></i>Project</a></li>-->
 
             </section>
 
@@ -120,13 +102,14 @@
                     }
                     ?>
                     <small><?php
-                        if (!empty($description)) {
-                            echo $description;
-                        }
-                        ?></small>
+                    if (!empty($description)) {
+                        echo $description;
+                    }
+                    ?></small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="<?= base_url('admin/dashboard') ?>"><i class="fa fa-dashboard "></i>Dashboard</a></li>
+
+                    <li><a href="<?= base_url() ?>"><i class="fa fa-dashboard "></i>Dashboard</a></li>
                     <li class="active"><?= $title ?></li>
                 </ol>
             </section>

@@ -7,11 +7,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 /**
- * Description of Degree
+ * Description of Course
  *
  * @author End 
  */
-class Degree extends CI_Controller {
+class Course extends CI_Controller {
 
     //put your code here
     public $folder;
@@ -19,8 +19,8 @@ class Degree extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->model('degree_model');
-        $this->folder = "admin/degree/";
+        $this->load->model('course_model');
+        $this->folder = "admin/course/";
         $this->folder1 = "views/" . $this->folder;
     }
 
@@ -43,11 +43,11 @@ class Degree extends CI_Controller {
 
     public function index() {
         
-        $data = array('title' => 'Degree',
-            'page' => 'Acdemic Degrees List',
-            'description' => 'The list of Academic degree accomplised in PUP Bansud Campus',
-            'tblcontent' => $this->degree_model->get_degree(),
-            'degree' => 'active',
+        $data = array('title' => 'Course',
+            'page' => 'Course List',
+            'description' => 'The list of Course offered in PUP Bansud Campus',
+            'tblcontent' => $this->course_model->get_course(),
+            'course' => 'active',
             'dashboard'=>'',
             'alumni'=>''
                 );
@@ -57,14 +57,14 @@ class Degree extends CI_Controller {
     public function add() {
         $code = $this->input->post('code');
         $description = $this->input->post('description');
-        $this->degree_model->insert_degree($code, $description);
-        redirect(base_url('admin/degree'));
+        $this->course_model->insert_course($code, $description);
+        redirect(base_url('admin/course'));
     }
 
     public function delete($id) {
-        $this->degree_model->delete_degree($id);
+        $this->course_model->delete_course($id);
         $this->session->set_flashdata('message', '<div class="alert alert-warning"><strong>Successfully Deleted:</strong></div>');
-        redirect(base_url('admin/degree'));
+        redirect(base_url('admin/course'));
     }
 
 }

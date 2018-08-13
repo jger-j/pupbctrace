@@ -34,4 +34,3 @@ $sublnk = base_url() . "assets/";
 
 
     </head>
-    <body class="hold-transition skin-blue sidebar-mini">

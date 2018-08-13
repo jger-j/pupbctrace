@@ -7,24 +7,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 /**
- * Description of Degree_model
+ * Description of Course_model
  *
  * @author End 
  */
-class Degree_model extends CI_Model {
+class Course_model extends CI_Model {
 
     //put your code here
     public function __construct() {
         parent::__construct();
     }
 
-    public function get_degree() {
-        return $this->db->get('wb_degree')->result();
+    public function get_course() {
+        return $this->db->get('wb_course')->result();
     }
 
-    public function insert_degree($code, $description) {
+    public function insert_course($code, $description) {
         if ($this->check_exist($code, $description) == FALSE) {
-            return $this->db->insert('wb_degree', array('code' => $code, 'description' => $description));
+            return $this->db->insert('wb_course', array('code' => $code, 'description' => $description));
         } else {
             return FALSE;
         }
@@ -34,7 +34,7 @@ class Degree_model extends CI_Model {
 
         $this->db->where("code", $code);
         $this->db->where("description", $description);
-        $exist = $this->db->get('wb_degree');
+        $exist = $this->db->get('wb_course');
         if ($exist->num_rows() > 0) {
             return TRUE;
         } else {
@@ -43,14 +43,14 @@ class Degree_model extends CI_Model {
     }
 
     public function update($id, $code, $description) {
-        $this->db->update('wb_degree');
+        $this->db->update('wb_course');
     }
 
-    public function delete_degree($id) {
+    public function delete_course($id) {
         $data = array(
-            'degree_no' => $id
+            'course_no' => $id
         );
-        $this->db->delete('wb_degree', $data);
+        $this->db->delete('wb_course', $data);
     }
 
 }

@@ -19,38 +19,22 @@ class Alumni_model extends CI_model {
     }
 
     public function get_alumni() {
-
-        return $this->db->query('SELECT `wb_alumni`.*, `wb_degree`.*
-FROM `wb_degree`
- LEFT JOIN `workbyte_db`.`wb_alumni` ON `wb_degree`.`degree_no` = `wb_alumni`.`degree_no`')->result();
-    }
-
-    public function get_degree() {
-        return $this->db->get('wb_degree');
+        return $this->db->query('SELECT `wb_user`.*, `wb_course`.*
+FROM `wb_user`
+ LEFT JOIN `workbyte_db`.`wb_course` ON `wb_user`.`course_no` = `wb_course`.`course_no` 
+')->result();
     }
 
     public function insert_alumnni($data) {
-        $this->db->insert('wb_alumni', $data);
-        $number = $data['alumni_number'];
-        $email = $data['email'];
-        $this->create_alumni_account($number, $email);
+        $this->db->insert('wb_user', $data);
     }
 
-    public function create_alumni_account($number, $email) {
-        $data = array(
-            'password' => "11223344",
-            'alumni_number' => $number,
-            'email' => $email,
-            'role' => 'Alumnus'
-        );
-        $this->db->insert('wb_users', $data);
-    }
-    public function delete_alumni($alumni_number){
+    public function delete_alumni($alumni_number) {
         $data = array(
             'alumni_number' => $alumni_number
         );
-        $this->db->delete('wb_alumni', $data);
-        $this->db->delete('wb_users', $data);
+        $this->db->delete('wb_user', $data);
+        
     }
 
 }
