@@ -69,8 +69,8 @@ class Alumni extends CI_Controller {
         $this->form_validation->set_rules('firstname', 'First name', 'required');
         $this->form_validation->set_rules('middlename', 'Middle name', 'required');
         $this->form_validation->set_rules('surname', 'Surname', 'required');
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[wb_user.email]');
-        $this->form_validation->set_rules('alumni_number', 'Alumni number', 'required|is_unique[wb_user.alumni_number]');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[wv_user.email]');
+        $this->form_validation->set_rules('alumni_number', 'Alumni number', 'required|is_unique[wv_user.alumni_number]');
         $this->form_validation->set_rules('course', 'Academic course', 'required');
         $this->form_validation->set_rules('yeargraduated', 'Year graduated', 'required');
     }

@@ -19,12 +19,12 @@ class Course_model extends CI_Model {
     }
 
     public function get_course() {
-        return $this->db->get('wb_course')->result();
+        return $this->db->get('wv_course')->result();
     }
 
     public function insert_course($code, $description) {
         if ($this->check_exist($code, $description) == FALSE) {
-            return $this->db->insert('wb_course', array('code' => $code, 'description' => $description));
+            return $this->db->insert('wv_course', array('code' => $code, 'description' => $description));
         } else {
             return FALSE;
         }
@@ -34,7 +34,7 @@ class Course_model extends CI_Model {
 
         $this->db->where("code", $code);
         $this->db->where("description", $description);
-        $exist = $this->db->get('wb_course');
+        $exist = $this->db->get('wv_course');
         if ($exist->num_rows() > 0) {
             return TRUE;
         } else {
@@ -43,14 +43,14 @@ class Course_model extends CI_Model {
     }
 
     public function update($id, $code, $description) {
-        $this->db->update('wb_course');
+        $this->db->update('wv_course');
     }
 
     public function delete_course($id) {
         $data = array(
             'course_no' => $id
         );
-        $this->db->delete('wb_course', $data);
+        $this->db->delete('wv_course', $data);
     }
 
 }

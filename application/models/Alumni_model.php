@@ -19,21 +19,21 @@ class Alumni_model extends CI_model {
     }
 
     public function get_alumni() {
-        return $this->db->query('SELECT `wb_user`.*, `wb_course`.*
-FROM `wb_user`
- LEFT JOIN `workbyte_db`.`wb_course` ON `wb_user`.`course_no` = `wb_course`.`course_no` 
+        return $this->db->query('SELECT `wv_user`.*, `wv_course`.*
+FROM `wv_user`
+ LEFT JOIN `tracepcr_db`.`wv_course` ON `wv_user`.`course_no` = `wv_course`.`course_no` 
 ')->result();
     }
 
     public function insert_alumnni($data) {
-        $this->db->insert('wb_user', $data);
+        $this->db->insert('wv_user', $data);
     }
 
     public function delete_alumni($alumni_number) {
         $data = array(
             'alumni_number' => $alumni_number
         );
-        $this->db->delete('wb_user', $data);
+        $this->db->delete('wv_user', $data);
         
     }
 

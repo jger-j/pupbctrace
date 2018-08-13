@@ -9,7 +9,7 @@ class User_model extends CI_Model {
 
         $email = $this->input->post('email');
         $password = $this->input->post('password');
-        $query = $this->db->get_where('wb_user', array('email' => $email, 'password' => $password));
+        $query = $this->db->get_where('wv_user', array('email' => $email, 'password' => $password));
         if ($query->row_array() > 0) {
             foreach ($query->result() as $data) {
                 $this->session->set_userdata('role', $data->alumni_number);

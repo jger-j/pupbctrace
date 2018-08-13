@@ -5,9 +5,9 @@
             <!-- Logo -->
             <a href="<?= base_url() ?>" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><b><i class="fa fa-gg"></i></b></span>
+                <span class="logo-mini"><b>w</b>v</span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><b>Alumni </b>Portal</span>
+                <span class="logo-lg"><b>Work</b>Vite</span>
             </a>
 
             <!-- Header Navbar -->
